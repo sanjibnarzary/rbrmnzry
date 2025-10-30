@@ -1,3 +1,100 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "profile-picture",
+      "description": "Profile picture of Sjt. Rabiram Narzary",
+      "imageUrl": "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxtYW4lMjBwb3J0cmFpdHxlbnwwfHx8fDE3NjE3NTYzNjF8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "man portrait"
+    },
+    {
+      "id": "hero-background",
+      "description": "Background image for the hero section",
+      "imageUrl": "https://images.unsplash.com/photo-1557318041-4290eaf63158?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxwb2xpdGljcyUyMG1lZXRpbmd8ZW58MHx8fHwxNzYxODY3OTE5fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "politics meeting"
+    },
+    {
+      "id": "portfolio-1",
+      "description": "Image of a newly constructed road",
+      "imageUrl": "https://images.unsplash.com/photo-1758608307651-a754ea35e829?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxkZXZlbG9wbWVudCUyMHJvYWR8ZW58MHx8fHwxNzYxODY3OTE5fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "development road"
+    },
+    {
+      "id": "portfolio-2",
+      "description": "Image of a new bridge",
+      "imageUrl": "https://images.unsplash.com/photo-1691149210746-c6bbb40f4bf6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxpbmZyYXN0cnVjdHVyZSUyMGJyaWRnZXxlbnwwfHx8fDE3NjE4MTM5ODJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "infrastructure bridge"
+    },
+    {
+      "id": "portfolio-3",
+      "description": "Image of a new community water project",
+      "imageUrl": "https://images.unsplash.com/photo-1713145030623-7ee3c6cb970e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxjb21tdW5pdHklMjB3YXRlcnxlbnwwfHx8fDE3NjE4Njc5MTl8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "community water"
+    },
+    {
+      "id": "portfolio-4",
+      "description": "Image of a renovated public school",
+      "imageUrl": "https://images.unsplash.com/photo-1588072432836-e10032774350?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxwdWJsaWMlMjBzY2hvb2x8ZW58MHx8fHwxNzYxODY3OTE5fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "public school"
+    },
+    {
+      "id": "portfolio-5",
+      "description": "Image of a new local market",
+      "imageUrl": "https://images.unsplash.com/photo-1609056615079-1f5f4c909a7f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxsb2NhbCUyMG1hcmtldHxlbnwwfHx8fDE3NjE4Mjc5OTJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "local market"
+    },
+    {
+      "id": "portfolio-6",
+      "description": "Image of a new health center",
+      "imageUrl": "https://images.unsplash.com/photo-1608979827489-2b855e79debe?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxoZWFsdGglMjBjZW50ZXJ8ZW58MHx8fHwxNzYxODY3OTE5fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "health center"
+    },
+    {
+      "id": "education-1",
+      "description": "Students in a classroom",
+      "imageUrl": "https://images.unsplash.com/photo-1522134939204-9b9957145632?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxzdHVkZW50cyUyMGNsYXNzcm9vbXxlbnwwfHx8fDE3NjE4MTc2MDN8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "students classroom"
+    },
+    {
+      "id": "education-2",
+      "description": "Teacher explaining a concept on a blackboard",
+      "imageUrl": "https://images.unsplash.com/photo-1758685848204-a170e78f1507?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHx0ZWFjaGVyJTIwd3JpdGluZ3xlbnwwfHx8fDE3NjE4Njc5MTl8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "teacher writing"
+    },
+    {
+      "id": "education-3",
+      "description": "A newly constructed school building",
+      "imageUrl": "https://images.unsplash.com/photo-1599725427295-6ed79ff8dbef?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxzY2hvb2wlMjBidWlsZGluZ3xlbnwwfHx8fDE3NjE4NTk1OTN8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "school building"
+    },
+    {
+      "id": "event-1",
+      "description": "Rabiram Narzary giving a public speech",
+      "imageUrl": "https://images.unsplash.com/photo-1675716823435-054de29a2402?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxwdWJsaWMlMjBzcGVlY2h8ZW58MHx8fHwxNzYxODY3OTE5fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "public speech"
+    },
+    {
+      "id": "event-2",
+      "description": "A large crowd at a public gathering",
+      "imageUrl": "https://images.unsplash.com/photo-1633846827819-0b5766f5b3df?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxjcm93ZCUyMGdhdGhlcmluZ3xlbnwwfHx8fDE3NjE4Njc5MTl8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "crowd gathering"
+    },
+    {
+      "id": "event-3",
+      "description": "Ribbon cutting ceremony for a new project",
+      "imageUrl": "https://images.unsplash.com/photo-1705762839382-33638355d3ca?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxyaWJib24lMjBjdXR0aW5nfGVufDB8fHx8MTc2MTg2NzkxOXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "ribbon cutting"
+    },
+    {
+      "id": "event-4",
+      "description": "A community event with local people",
+      "imageUrl": "https://images.unsplash.com/photo-1565813086292-604790c8a97b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxjb21tdW5pdHklMjBldmVudHxlbnwwfHx8fDE3NjE4MzQ4MjF8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "community event"
+    },
+    {
+      "id": "about-image",
+      "description": "Sjt. Rabiram Narzary in a professional setting",
+      "imageUrl": "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8cHJvZmVzc2lvbmFsJTIwbWFufGVufDB8fHx8MTc2MTgyODk2NXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "professional man"
+    }
+  ]
 }
