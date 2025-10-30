@@ -5,6 +5,8 @@ import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Logo } from "@/components/logo";
 import { Navigation } from "./navigation";
+import { ThemeToggle } from "../theme-toggle";
+import { LanguageSwitch } from "../language-switch";
 
 export function Header() {
   return (
@@ -17,9 +19,15 @@ export function Header() {
 
         <div className="hidden md:flex md:items-center md:gap-4">
           <Navigation />
+          <div className="flex items-center gap-2">
+            <LanguageSwitch />
+            <ThemeToggle />
+          </div>
         </div>
 
-        <div className="md:hidden">
+        <div className="md:hidden flex items-center gap-2">
+          <LanguageSwitch />
+          <ThemeToggle />
           <Sheet>
             <SheetTrigger asChild>
               <Button variant="ghost" size="icon">
