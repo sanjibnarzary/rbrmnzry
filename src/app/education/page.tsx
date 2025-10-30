@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
-import { CheckCircle } from "lucide-react";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { CheckCircle, School } from "lucide-react";
 
 const educationInitiatives = [
   {
@@ -39,7 +39,7 @@ const educationInitiatives = [
 export default function EducationPage() {
   return (
     <div className="container mx-auto py-16 px-4 md:px-6">
-      <header className="text-center mb-12">
+      <header className="text-center mb-16">
         <h1 className="text-4xl md:text-5xl font-bold font-headline text-primary">
           Empowering Through Education
         </h1>
@@ -48,38 +48,58 @@ export default function EducationPage() {
         </p>
       </header>
 
-      <div className="space-y-16">
-        {educationInitiatives.map((initiative, index) => {
-          const image = PlaceHolderImages.find(p => p.id === initiative.id);
-          return (
-            <div key={initiative.id} className={`grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center ${index % 2 !== 0 ? 'lg:grid-flow-row-dense' : ''}`}>
-              <div className={index % 2 !== 0 ? 'lg:col-start-2' : ''}>
-                {image && (
-                  <Image
-                    src={image.imageUrl}
-                    alt={image.description}
-                    width={600}
-                    height={400}
-                    className="rounded-lg shadow-xl w-full object-cover aspect-video"
-                    data-ai-hint={image.imageHint}
-                  />
-                )}
+      <div className="relative">
+        {/* The vertical line */}
+        <div className="absolute left-1/2 -translate-x-1/2 h-full w-0.5 bg-border hidden md:block" />
+
+        <div className="space-y-16 md:space-y-0">
+          {educationInitiatives.map((initiative, index) => {
+            const image = PlaceHolderImages.find(p => p.id === initiative.id);
+            const isRightSide = index % 2 === 0;
+
+            return (
+              <div key={initiative.id} className="grid grid-cols-1 md:grid-cols-2 md:gap-x-12 relative">
+                {/* The content block */}
+                <div className={`md:order-${isRightSide ? 1 : 2} mb-8 md:mb-0`}>
+                  <Card className="group overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300">
+                    {image && (
+                      <Image
+                        src={image.imageUrl}
+                        alt={image.description}
+                        width={600}
+                        height={400}
+                        className="w-full object-cover aspect-video group-hover:scale-105 transition-transform duration-300"
+                        data-ai-hint={image.imageHint}
+                      />
+                    )}
+                    <CardHeader>
+                      <CardTitle className="font-headline text-2xl">{initiative.title}</CardTitle>
+                    </CardHeader>
+                    <CardContent className="space-y-4">
+                      <p className="text-muted-foreground">{initiative.description}</p>
+                      <ul className="space-y-2">
+                        {initiative.points.map((point, i) => (
+                          <li key={i} className="flex items-start">
+                            <CheckCircle className="h-5 w-5 text-green-600 mt-1 mr-3 flex-shrink-0" />
+                            <span>{point}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </CardContent>
+                  </Card>
+                </div>
+
+                {/* The timeline dot */}
+                <div className="hidden md:flex absolute top-8 left-1/2 -translate-x-1/2 w-8 h-8 bg-background border-4 border-primary rounded-full items-center justify-center">
+                    <School className="w-4 h-4 text-primary"/>
+                </div>
+
+                {/* The empty space on the other side */}
+                <div className={`md:order-${isRightSide ? 2 : 1}`}></div>
               </div>
-              <div className="space-y-4">
-                <h2 className="text-3xl font-bold font-headline">{initiative.title}</h2>
-                <p className="text-muted-foreground">{initiative.description}</p>
-                <ul className="space-y-2">
-                  {initiative.points.map((point, i) => (
-                    <li key={i} className="flex items-start">
-                      <CheckCircle className="h-5 w-5 text-green-600 mt-1 mr-3 flex-shrink-0" />
-                      <span>{point}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-          );
-        })}
+            );
+          })}
+        </div>
       </div>
     </div>
   );
