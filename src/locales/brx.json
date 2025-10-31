@@ -16,7 +16,7 @@
   "focus_education_title": " सोलोंथाइ",
   "focus_education_desc": "सोलोंथाइनि परिस्थितिखौ जौगाहोनायनि थाखाय जोंनि नाजानायखौ नायबिजिर, फैगौ जारिमिननि दैदेनगिरिफोरखौ गोहो होयो।",
   "focus_events_title": "हाबाफारि",
-  "focus_events_desc": "फैगौ गेवलां जथुमफोर, बिथांखि बेखेवनाय, आरो माहारियारि लोगो हमनायफोरनि सोमोन्दै खौरां लाना था।",
+  "focus_events_desc": "फैगौ गेवलां जथुमफोर, बिथांखि बेखेवनाय, आरो माहारियारि लोगो हमनाyफोरनि सोमोन्दै खौरां लाना था।",
   "recent_events_title": "दानिया जादोंग हाबाफारिफोर",
   "recent_events_view_all": "गासैबो हाबाफारिफोर नाय",
   "recent_events_desc": "हाबाफारिनि सोमोन्दै मोनसे सुंद' बिबोस, बेनि थांखिखौ हाइलाइट खालामनाय आरो माहारिनि सायाव बेनि मोजां गोहोम।",
@@ -24,5 +24,5 @@
   "footer_quick_links": "खुलुमनाय लिंकफोर",
   "footer_follow_me": "आंखौ फलो खालाम",
   "footer_copyright": "सायख' बिगोमा रबिराम नार्जारि। गासैबो हक सुरक्षित।",
-  "footer_created_by": "<a href=\\"https://narzary.com\\" target=\\"_blank\\" rel=\\"noopener noreferrer\\" class=\\"underline hover:text-primary-foreground\\">narzary.com</a> जों बानायनाय"
+  "footer_created_by": "Created by <a href=\"https://narzary.com\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"underline hover:text-primary-foreground\">narzary.com</a>"
 }
