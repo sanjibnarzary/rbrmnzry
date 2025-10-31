@@ -53,7 +53,7 @@ export default function Home() {
             <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground">
               <Link href={`/${language}/about`}>{t('hero_button_about')}</Link>
             </Button>
-            <Button asChild size="lg" variant="outline" className="border-white text-white hover:bg-white/10 hover:text-white">
+            <Button asChild size="lg" variant="outline" className="bg-green-500 hover:bg-green-600 border-green-500 text-white">
               <Link href={`/${language}/portfolio`}>{t('hero_button_portfolio')}</Link>
             </Button>
           </div>
