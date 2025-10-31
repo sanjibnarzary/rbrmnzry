@@ -1,3 +1,4 @@
+
 "use client"
 
 import * as React from "react"
@@ -22,7 +23,9 @@ export function LanguageSwitch() {
 
   const handleLanguageChange = (langValue: string) => {
     setLanguage(langValue);
-    const newPath = `/${langValue}${pathname.substring(3)}`;
+    const pathParts = pathname.split('/');
+    pathParts[1] = langValue;
+    const newPath = pathParts.join('/');
     router.replace(newPath);
   };
 
