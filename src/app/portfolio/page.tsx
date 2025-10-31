@@ -1,47 +1,11 @@
 import Image from "next/image";
+import Link from 'next/link';
+import { portfolioItems } from "@/lib/portfolio-data";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Briefcase } from "lucide-react";
-
-const portfolioItems = [
-  {
-    id: "portfolio-1",
-    category: "Infrastructure",
-    title: "Rural Road Development",
-    description: "Spearheaded the construction of over 200km of all-weather roads, connecting remote villages to main economic hubs.",
-  },
-  {
-    id: "portfolio-2",
-    category: "Connectivity",
-    title: "Bridge Construction Program",
-    description: "Oversaw the successful completion of 15 new bridges, improving transportation and reducing travel time for thousands.",
-  },
-  {
-    id: "portfolio-3",
-    category: "Public Health",
-    title: "Clean Drinking Water Initiative",
-    description: "Launched a major initiative to provide access to safe and clean drinking water for over 50,000 households.",
-  },
-  {
-    id: "portfolio-4",
-    category: "Education",
-    title: "School Modernization Project",
-    description: "Upgraded facilities and provided modern learning tools for more than 100 government schools.",
-  },
-  {
-    id: "portfolio-5",
-    category: "Economy",
-    title: "Local Market Revitalization",
-    description: "Revitalized 10 local markets to boost rural economy and provide better platforms for local producers.",
-  },
-  {
-    id: "portfolio-6",
-    category: "Healthcare",
-    title: "Primary Health Center Expansion",
-    description: "Expanded and equipped 20 Primary Health Centers to improve healthcare access in rural areas.",
-  },
-];
+import { Briefcase, ArrowRight } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 export default function PortfolioPage() {
   return (
@@ -71,10 +35,10 @@ export default function PortfolioPage() {
 
                 <Card className="flex flex-col md:flex-row overflow-hidden group hover:shadow-xl transition-shadow duration-300">
                   {image && (
-                    <div className="md:w-1/3 lg:w-2/5 flex-shrink-0">
+                     <div className="md:w-1/3 lg:w-2/5 flex-shrink-0">
                       <Image
                         src={image.imageUrl}
-                        alt={image.description}
+                        alt={item.title}
                         width={600}
                         height={400}
                         className="w-full h-56 md:h-full object-cover group-hover:scale-105 transition-transform duration-300"
@@ -82,16 +46,21 @@ export default function PortfolioPage() {
                       />
                     </div>
                   )}
-                  <div className="flex-grow">
+                  <div className="flex flex-col flex-grow">
                      <CardHeader>
                        <Badge variant="default" className="bg-accent text-accent-foreground w-fit mb-2">{item.category}</Badge>
                        <CardTitle className="font-headline">{item.title}</CardTitle>
                      </CardHeader>
-                     <CardContent>
+                     <CardContent className="flex-grow">
                        <CardDescription>
-                         {item.description}
+                         {item.shortDescription}
                        </CardDescription>
                      </CardContent>
+                     <div className="p-6 pt-0 mt-auto">
+                        <Button asChild variant="link" className="text-primary px-0">
+                          <Link href={`/portfolio/${item.id}`}>Read More <ArrowRight className="ml-2 h-4 w-4" /></Link>
+                        </Button>
+                     </div>
                   </div>
                 </Card>
               </div>
