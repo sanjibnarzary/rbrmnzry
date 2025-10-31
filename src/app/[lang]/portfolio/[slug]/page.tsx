@@ -4,14 +4,11 @@ import { portfolioItems } from '@/lib/portfolio-data';
 import { PortfolioDetailClient } from './client-page';
 
 type PortfolioDetailPageProps = {
-  params: {
-    slug: string;
-    lang: string;
-  };
+  params: { slug: string; lang: string };
 };
 
 // Generate static paths for each portfolio item for each language
-export async function generateStaticParams(): Promise<{ lang: string, slug: string }[]> {
+export async function generateStaticParams() {
     const languages = ['en', 'brx', 'as', 'bn'];
     const paths = languages.flatMap(lang => 
         portfolioItems.map(item => ({
