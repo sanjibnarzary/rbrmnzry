@@ -2,6 +2,7 @@
 
 import * as React from "react"
 import { Check, Languages } from "lucide-react"
+import { usePathname, useRouter } from 'next/navigation'
 
 import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
@@ -11,16 +12,19 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
+import { languages, useLanguage } from "@/context/language-context"
 
-const languages = [
-  { value: "en", label: "English" },
-  { value: "brx", label: "Bodo" },
-  { value: "as", label: "Assamese" },
-  { value: "bn", label: "Bengali" },
-];
 
 export function LanguageSwitch() {
-  const [selectedLanguage, setSelectedLanguage] = React.useState("en");
+  const { language, setLanguage } = useLanguage();
+  const router = useRouter();
+  const pathname = usePathname();
+
+  const handleLanguageChange = (langValue: string) => {
+    setLanguage(langValue);
+    const newPath = `/${langValue}${pathname.substring(3)}`;
+    router.replace(newPath);
+  };
 
   return (
     <DropdownMenu>
@@ -34,12 +38,12 @@ export function LanguageSwitch() {
         {languages.map((lang) => (
           <DropdownMenuItem
             key={lang.value}
-            onClick={() => setSelectedLanguage(lang.value)}
+            onClick={() => handleLanguageChange(lang.value)}
           >
             <Check
               className={cn(
                 "mr-2 h-4 w-4",
-                selectedLanguage === lang.value ? "opacity-100" : "opacity-0"
+                language === lang.value ? "opacity-100" : "opacity-0"
               )}
             />
             {lang.label}
