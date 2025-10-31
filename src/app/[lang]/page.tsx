@@ -1,5 +1,4 @@
 
-"use client";
 
 import Image from 'next/image';
 import Link from 'next/link';
@@ -8,6 +7,12 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { ArrowRight, BookOpen, Briefcase, Calendar } from 'lucide-react';
 import { useLanguage } from '@/context/language-context';
+
+// Generate static paths for each language
+export async function generateStaticParams(): Promise<{ lang: string }[]> {
+  const languages = ['en', 'brx', 'as', 'bn'];
+  return languages.map(lang => ({ lang }));
+}
 
 export default function Home() {
   const { t, language } = useLanguage();
