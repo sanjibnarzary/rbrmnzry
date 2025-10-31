@@ -1,11 +1,8 @@
 
+
 import { notFound } from 'next/navigation';
 import { portfolioItems } from '@/lib/portfolio-data';
 import { PortfolioDetailClient } from './client-page';
-
-type PortfolioDetailPageProps = {
-  params: { slug: string; lang: string };
-};
 
 // Generate static paths for each portfolio item for each language
 export async function generateStaticParams(): Promise<{ lang: string, slug: string }[]> {
@@ -19,7 +16,7 @@ export async function generateStaticParams(): Promise<{ lang: string, slug: stri
     return paths;
 }
 
-export default function PortfolioDetailPage({ params }: PortfolioDetailPageProps) {
+export default function PortfolioDetailPage({ params }: { params: { slug: string; lang: string } }) {
   const { slug } = params;
   const item = portfolioItems.find(p => p.id === slug);
 
