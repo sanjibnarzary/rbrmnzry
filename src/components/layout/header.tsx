@@ -14,7 +14,7 @@ export function Header() {
       <div className="container flex h-16 items-center justify-between px-4 md:px-6">
         <Link href="/" className="flex items-center gap-2">
           <Logo className="h-6 w-auto" />
-          <span className="sr-only">Rabiram Narzary</span>
+          <span className="sr-only">Sjt. Rabiram Narzary</span>
         </Link>
 
         <div className="hidden md:flex md:items-center md:gap-4">
@@ -39,7 +39,7 @@ export function Header() {
               <div className="grid gap-6 p-6">
                 <Link href="/" className="-m-1.5 p-1.5">
                   <Logo className="h-6 w-auto" />
-                  <span className="sr-only">Rabiram Narzary</span>
+                  <span className="sr-only">Sjt. Rabiram Narzary</span>
                 </Link>
                 <Navigation isMobile />
               </div>

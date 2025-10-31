@@ -3,9 +3,9 @@ import type { SVGProps } from 'react';
 export function Logo(props: SVGProps<SVGSVGElement>) {
   return (
     <svg
-      width="150"
+      width="180"
       height="30"
-      viewBox="0 0 150 30"
+      viewBox="0 0 180 30"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       aria-label="Rabiram Narzary Logo"
@@ -20,7 +20,7 @@ export function Logo(props: SVGProps<SVGSVGElement>) {
         fill="hsl(var(--primary))"
         className="fill-primary"
       >
-        Rabiram Narzary
+        Sjt. Rabiram Narzary
       </text>
     </svg>
   );
