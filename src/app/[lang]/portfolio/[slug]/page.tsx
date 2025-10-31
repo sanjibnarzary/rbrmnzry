@@ -1,6 +1,3 @@
-
-
-
 import { notFound } from 'next/navigation';
 import { portfolioItems } from '@/lib/portfolio-data';
 import { PortfolioDetailClient } from './client-page';

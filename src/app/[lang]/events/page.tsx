@@ -1,14 +1,14 @@
-// Generate static paths for each language
-export async function generateStaticParams(): Promise<{ lang: string }[]> {
-  const languages = ['en', 'brx', 'as', 'bn'];
-  return languages.map(lang => ({ lang }));
-}
 import Image from "next/image";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { MapPin, Calendar } from "lucide-react";
 
+// Generate static paths for each language
+export async function generateStaticParams(): Promise<{ lang: string }[]> {
+  const languages = ['en', 'brx', 'as', 'bn'];
+  return languages.map(lang => ({ lang }));
+}
 const upcomingEvents = [
   {
     id: "event-1",
