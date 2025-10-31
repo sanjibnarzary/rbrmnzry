@@ -7,7 +7,7 @@ import { useLanguage } from "@/context/language-context";
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
 
   const quickLinks = [
     { href: "/", label: t('nav_home') },
@@ -22,7 +22,7 @@ export function Footer() {
       <div className="container py-12 px-4 md:px-6">
         <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
           <div className="space-y-4">
-            <Link href="/" className="inline-block">
+            <Link href={`/${language}/`} className="inline-block">
               <Logo className="h-8 w-auto fill-primary-foreground" />
               <span className="sr-only">Rabiram Narzary</span>
             </Link>
@@ -34,7 +34,7 @@ export function Footer() {
             </h4>
             <ul className="space-y-2">
               {quickLinks.map(link => (
-                 <li><Link href={link.href} className="text-sm hover:underline">{link.label}</Link></li>
+                 <li key={link.href}><Link href={`/${language}${link.href === '/' ? '' : link.href}`} className="text-sm hover:underline">{link.label}</Link></li>
               ))}
             </ul>
           </div>
