@@ -22,7 +22,7 @@ export function Footer() {
       <div className="container py-12 px-4 md:px-6">
         <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
           <div className="space-y-4">
-            <Link href={`/${language}/`} className="inline-block">
+            <Link href={`/${language}`} className="inline-block">
               <Logo className="h-8 w-auto fill-primary-foreground" />
               <span className="sr-only">Rabiram Narzary</span>
             </Link>

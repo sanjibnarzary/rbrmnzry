@@ -1,3 +1,6 @@
+
+"use client"
+
 import Image from "next/image";
 import Link from 'next/link';
 import { portfolioItems } from "@/lib/portfolio-data";
@@ -6,8 +9,10 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/com
 import { Badge } from "@/components/ui/badge";
 import { Briefcase, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useLanguage } from "@/context/language-context";
 
 export default function PortfolioPage() {
+  const { language } = useLanguage();
   return (
     <div className="container mx-auto py-16 px-4 md:px-6">
       <header className="text-center mb-16">
@@ -58,7 +63,7 @@ export default function PortfolioPage() {
                      </CardContent>
                      <div className="p-6 pt-0 mt-auto">
                         <Button asChild variant="link" className="text-primary px-0">
-                          <Link href={`/portfolio/${item.id}`}>Read More <ArrowRight className="ml-2 h-4 w-4" /></Link>
+                          <Link href={`/${language}/portfolio/${item.id}`}>Read More <ArrowRight className="ml-2 h-4 w-4" /></Link>
                         </Button>
                      </div>
                   </div>

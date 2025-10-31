@@ -1,18 +1,24 @@
+
+"use client"
+
 import { notFound } from 'next/navigation';
 import Image from 'next/image';
 import { portfolioItems } from '@/lib/portfolio-data';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { Badge } from '@/components/ui/badge';
+import { useLanguage } from '@/context/language-context';
 
 type PortfolioDetailPageProps = {
   params: {
     slug: string;
+    lang: string;
   };
 };
 
 export default function PortfolioDetailPage({ params }: PortfolioDetailPageProps) {
   const { slug } = params;
   const item = portfolioItems.find(p => p.id === slug);
+  const { language } = useLanguage();
 
   if (!item) {
     notFound();
@@ -83,9 +89,14 @@ export default function PortfolioDetailPage({ params }: PortfolioDetailPageProps
   );
 }
 
-// Generate static paths for each portfolio item
+// Generate static paths for each portfolio item for each language
 export async function generateStaticParams() {
-  return portfolioItems.map(item => ({
-    slug: item.id,
-  }));
+    const languages = ['en', 'brx', 'as', 'bn'];
+    const paths = languages.flatMap(lang => 
+        portfolioItems.map(item => ({
+            lang: lang,
+            slug: item.id,
+        }))
+    );
+    return paths;
 }
