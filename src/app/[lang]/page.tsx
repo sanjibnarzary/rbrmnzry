@@ -8,11 +8,6 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/com
 import { ArrowRight, BookOpen, Briefcase, Calendar } from 'lucide-react';
 import { useLanguage } from '@/context/language-context';
 
-// Generate static paths for each language
-export async function generateStaticParams(): Promise<{ lang: string }[]> {
-  const languages = ['en', 'brx', 'as', 'bn'];
-  return languages.map(lang => ({ lang }));
-}
 
 export default function Home() {
   const { t, language } = useLanguage();
